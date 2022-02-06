@@ -17,15 +17,6 @@ AFRAME.registerComponent("hide-in-ar-mode", {
 	},
 });
 
-AFRAME.registerComponent("occlusion-material", {
-	update: function () {
-		this.el.components.material.material.colorWrite = false;
-	},
-});
-
-
-
-
 AFRAME.registerComponent("hide-on-hit-test-start", {
   init: function() {
     var self = this;
