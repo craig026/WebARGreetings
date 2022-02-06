@@ -40,7 +40,7 @@
   <body>
     <a-scene
             webxr="overlayElement:#dom-overlay;"
-            ar-hit-test="target:#reticle;">
+            ar-hit-test="target:#cube;">
             <a-entity id="cube" hide-on-hit-test-start>
                     <a-box color="#4CC3D9"></a-box>
             </a-entity>
@@ -54,14 +54,6 @@
 				            ></a-plane>
 			      </a-entity>
             <a-sky color="skyblue" hide-in-ar-mode></a-sky>
-            <a-plane
-                    rotation="-90 0 0"
-                    width="20"
-                    height="20"
-                    color="#43A367"
-                    static-body
-                    hide-in-ar-mode
-            ></a-plane>
             <a-light id="dirlight" auto-shadow-cam intensity="0.7" light="castShadow:true;type:directional" position="10 10 10"></a-light>
             <a-light hide-on-enter-ar intensity="0.3" light="type:hemisphere;color:yellow;groundColor:blue;" position="10 10 10"></a-light>
             <a-entity hide-on-enter-ar environment="lighting:none;shadow:true;"></a-entity>
@@ -69,7 +61,7 @@
 
     <div id="dom-overlay" hide-in-ar-mode>
       <h1>
-        Welcome to your AR Greeting2!
+        Welcome to your AR Greeting!
       </h1>
       <div id="dom-overlay-message">Enter AR to start.</div>
     </div>
