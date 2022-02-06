@@ -32,6 +32,7 @@ AFRAME.registerComponent("hide-on-hit-test-start", {
 window.addEventListener("DOMContentLoaded", function() {
   const sceneEl = document.querySelector("a-scene");
   const message = document.getElementById("dom-overlay-message");
+	const taptoplace = document.getElementById("taptoplace");
 
   // If the user taps on any buttons or interactive elements we may add then prevent
   // Any WebXR select events from firing
@@ -58,6 +59,7 @@ window.addEventListener("DOMContentLoaded", function() {
         "ar-hit-test-achieved",
         function() {
           message.innerHTML = `Select the location to place<br />By tapping on the screen.`;
+					taptoplace.style.display = "block";
         },
         { once: true }
       );
@@ -68,6 +70,7 @@ window.addEventListener("DOMContentLoaded", function() {
         function() {
           // Object placed for the first time
           message.textContent = "Well done!";
+					taptoplace.style.display = "none";
         },
         { once: true }
       );
