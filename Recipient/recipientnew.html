@@ -38,7 +38,9 @@
     </style>
   </head>
   <body>
-    <a-scene ar-hit-test="target:#reticle;">
+    <a-scene
+    webxr="overlayElement:#dom-overlay;"
+    ar-hit-test="target:#reticle;">
       <a-entity id="reticle" hide-in-ar-mode>
         <a-plane
          rotation="-90 0 0"
