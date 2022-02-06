@@ -39,7 +39,9 @@
   </head>
   <body>
     <a-scene
-            webxr="overlayElement:#dom-overlay;"
+            webxr="requiredFeatures: hit-test,local-floor;
+                   optionalFeatures: dom-overlay;
+                   overlayElement:#dom-overlay;"
             ar-hit-test="target:#cube;type:map;">
             <a-entity id="cube" hide-on-hit-test-start>
                     <a-box color="#4CC3D9"></a-box>
