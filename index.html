@@ -77,8 +77,8 @@
         </label>
       </div>
       <div>
-        <form id="form1" action="php/uploadinfo.php" method="post" enctype="multipart/form-data">
-          <button class="nextButton" id="enterEmailNextButton" onclick="submitGreetingInfo()">Next</button>
+        <form onsubmit="submitGreetingInfo()" id="form1" action="php/uploadinfo.php" method="post" enctype="multipart/form-data">
+          <button class="nextButton" id="enterEmailNextButton" onclick="">Next</button>
         </form>
         <button class="backButton" id="enterEmailBackButton" onclick="addNamePage()">Back</button>
       </div>

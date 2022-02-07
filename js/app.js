@@ -94,6 +94,7 @@ function enterEmailPage(){
 }
 
 function submitGreetingInfo(){
+  location.replace("https://craig026.github.io/WebARGreetings/Recipient/recipientnew.html");
   alert("Submitting Greeting Info!");
-  location.replace("https://www.w3schools.com");
+
 }
