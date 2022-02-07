@@ -95,4 +95,5 @@ function enterEmailPage(){
 
 function submitGreetingInfo(){
   alert("Submitting Greeting Info!");
+  location.replace("https://www.w3schools.com");
 }
