@@ -10,6 +10,7 @@
     <!-- include a default environemnt which makes VR  look nice, https://github.com/feiss/aframe-environment-component -->
     <script src="https://unpkg.com/aframe-environment-component@1.3.0/dist/aframe-environment-component.min.js"></script>
     <script src="ref/ar-components.js"></script>
+    <link rel="recipientStyle" href="ref/recipientStyle.css">
     <style>
       body {
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -24,16 +25,6 @@
         background: #33333355;
         border-top: 5px solid #ffffff55;
         color: white;
-      }
-
-      .welcomeScreen{
-        background-image: url('ref/Background.png');
-        width: 100%;
-        height: 100%;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        position: relative;
       }
 
       .myEnterVRButton{
@@ -91,9 +82,11 @@
 
     <div id="dom-overlay">
       <div class="welcomeScreen" id="welcomeScreen">
-        <h1>
-          Welcome to your AR Greeting!
-        </h1>
+        <div class="title" id = "title">AR Greetings</div>
+        <div class="logo" id="logo"></div>
+        <div class="recipientWelcomePage" id="recipientWelcomePage">
+          <div class="intro" id = "intro">Create an Augmented Reality greeting for your friends and family.</div>
+        </div>
         <div id="dom-overlay-message">Enter AR to start.</div>
       </div>
       <div class="taptoplace" id="taptoplace">Tap to Place</div>
