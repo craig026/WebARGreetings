@@ -50,6 +50,17 @@
         height: 36px;
         border: 3px black;
       }
+
+      .dom-overlay-message {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        padding: 1em;
+        background: #33333355;
+        border-top: 5px solid #ffffff55;
+        color: white;
+      }
     </style>
   </head>
   <body>
@@ -85,7 +96,7 @@
         <div class="recipientWelcomePage" id="recipientWelcomePage">
           <div class="intro" id = "intro">Someone has sent you an AR greeting!<br>Tap 'Enter AR' below to view your personalised message.</div>
         </div>
-        <!--<div id="dom-overlay-message">Enter AR to start.</div>-->
+        <div class="dom-overlay-message" id="dom-overlay-message"></div>
       </div>
       <div class="taptoplace" id="taptoplace">Tap to Place</div>
 
