@@ -43,7 +43,8 @@ window.addEventListener("DOMContentLoaded", function() {
   sceneEl.addEventListener("enter-vr", function() {
     if (this.is("ar-mode")) {
       // Entered AR
-      message.textContent = "";
+			message.style.display = "block"
+			message.textContent = "";
 
       // Hit testing is available
       this.addEventListener(
