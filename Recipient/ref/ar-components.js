@@ -33,6 +33,7 @@ window.addEventListener("DOMContentLoaded", function() {
   const sceneEl = document.querySelector("a-scene");
   const message = document.getElementById("dom-overlay-message");
 	const taptoplace = document.getElementById("taptoplace");
+	const welcomeScreen = document.getElementById("welcomeScreen");
 
   // If the user taps on any buttons or interactive elements we may add then prevent
   // Any WebXR select events from firing
@@ -43,7 +44,8 @@ window.addEventListener("DOMContentLoaded", function() {
   sceneEl.addEventListener("enter-vr", function() {
     if (this.is("ar-mode")) {
       // Entered AR
-			message.style.display = "block"
+			welcomeScreen.style.display = "none";
+			message.style.display = "block";
 			message.textContent = "";
 
       // Hit testing is available
