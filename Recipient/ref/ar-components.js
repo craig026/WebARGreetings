@@ -31,9 +31,9 @@ AFRAME.registerComponent("hide-on-hit-test-start", {
 
 window.addEventListener("DOMContentLoaded", function() {
   const sceneEl = document.querySelector("a-scene");
+	const welcomePageContainer = document.getElementById("welcomePageContainer");
   const message = document.getElementById("dom-overlay-message");
 	const taptoplace = document.getElementById("taptoplace");
-	const welcomeScreen = document.getElementById("welcomeScreen");
 
   // If the user taps on any buttons or interactive elements we may add then prevent
   // Any WebXR select events from firing
@@ -44,7 +44,7 @@ window.addEventListener("DOMContentLoaded", function() {
   sceneEl.addEventListener("enter-vr", function() {
     if (this.is("ar-mode")) {
       // Entered AR
-			welcomeScreen.style.display = "none";
+			welcomePageContainer.style.display = "none";
 			message.style.display = "block";
 			//message.textContent = "";
 

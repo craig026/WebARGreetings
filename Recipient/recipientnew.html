@@ -19,7 +19,16 @@
       font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     }
 
-      .welcomeScreen{
+    .welcomeScreen{
+      width: 100%;
+      height: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+    }
+
+      .welcomePageContainer{
         background-image: url('ref/Background.png');
         width: 100%;
         height: 100%;
@@ -58,7 +67,7 @@
         border: 3px black;
       }
 
-      #dom-overlay-message {
+      .dom-overlay-message {
         position: absolute;
         left: 0;
         bottom: 0;
@@ -66,6 +75,19 @@
         padding: 1em;
         background: #33333355;
         border-top: 5px solid #ffffff55;
+        color: white;
+        display: none;
+      }
+
+      .taptoplace {
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 1em;
+        background: #33333355;
+        border: 5px solid #ffffff55;
         color: white;
         display: none;
       }
@@ -99,12 +121,16 @@
 
     <!--<div id="dom-overlay"></div>-->
       <div class="welcomeScreen" id="welcomeScreen">
-        <div class="title" id = "title">AR Greetings</div>
-        <div class="logo" id="logo"></div>
-        <div class="intro" id = "intro">Someone has sent you an AR greeting!<br>Tap 'Enter AR' below to view your personalised message.</div>
+        <div class="welcomePageContainer" id="welcomePageContainer">
+          <div class="title" id = "title">AR Greetings</div>
+          <div class="logo" id="logo"></div>
+          <div class="intro" id = "intro">Someone has sent you an AR greeting!<br>Tap 'Enter AR' below to view your personalised message.</div>
+        </div>
+        <div class="dom-overlay-message" id="dom-overlay-message"></div>
+        <div class="taptoplace" id="taptoplace">Tap to Place</div>
       </div>
-      <div class="dom-overlay-message" id="dom-overlay-message"></div>
-      <div class="taptoplace" id="taptoplace">Tap to Place</div>
+
+
 
   </body>
 </html>
