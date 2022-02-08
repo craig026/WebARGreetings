@@ -46,7 +46,7 @@ window.addEventListener("DOMContentLoaded", function() {
       // Entered AR
 			welcomeScreen.style.display = "none";
 			message.style.display = "block";
-			message.textContent = "";
+			//message.textContent = "";
 
 
       // Hit testing is available
