@@ -10,7 +10,18 @@
     <!-- include a default environemnt which makes VR  look nice, https://github.com/feiss/aframe-environment-component -->
     <script src="https://unpkg.com/aframe-environment-component@1.3.0/dist/aframe-environment-component.min.js"></script>
     <script src="ref/ar-components.js"></script>
-    <link rel="recipientStyle" href="ref/recipientStyle.css">
+    <!--<link rel="recipientStyle" href="ref/recipientStyle.css">-->
+    <style>
+      .welcomeScreen{
+        background-image: url('ref/Background.png');
+        width: 100%;
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+      }
+    </style>
   </head>
   <body>
     <a-scene
