@@ -44,9 +44,11 @@ window.addEventListener("DOMContentLoaded", function() {
   sceneEl.addEventListener("enter-vr", function() {
     if (this.is("ar-mode")) {
       // Entered AR
+			alert("Entered AR mode!");
 			welcomeScreen.style.display = "none";
 			message.style.display = "block";
 			message.textContent = "";
+
 
       // Hit testing is available
       this.addEventListener(
