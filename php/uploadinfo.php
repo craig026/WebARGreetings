@@ -15,7 +15,7 @@ echo "Connected successfully";
 
 $greeting = $_POST['modelTitle'];
 $filename = $_FILES["inpFile"]["name"];
-$target_dir = "uploads/";
+$target_dir = "https://craig026.000webhostapp.com/uploads/";
 $target_file = $target_dir . basename($_FILES["inpFile"]["name"]);
 $recipientname = $_POST['inpName'];
 $senderemail = $_POST['inpEmail'];
