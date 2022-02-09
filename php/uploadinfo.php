@@ -33,6 +33,15 @@ if(in_array($imageFileType,$extensions_arr)){
 $query = "INSERT INTO ar_greetings (3d_model, photo, recipient_name, sender_email) VALUES ('".$greeting."', '".$filename."', '".$recipientname."', '".$senderemail."')";
 mysqli_query($conn,$query);
 
+//Check for any errors
+if($conn->query($query) === TRUE) {
+  echo "Details have been uploaded!";
+} else {
+  echo "Error: " . $query . "<br>" . $conn->error;
+}
+
+$conn->close();
+
   //Upload file
   //move_uploaded_file($_FILES['inpFile']['tmp_name'],$target_dir.$filename);
 }
