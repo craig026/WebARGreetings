@@ -1,5 +1,5 @@
 <?php
-  include_once 'includes/dbh.inc.php';
+  include 'php/uploadinfo.php';
 ?>
 
 <!DOCTYPE html>
@@ -77,8 +77,8 @@
         </label>
       </div>
       <div>
-        <form onsubmit="submitGreetingInfo()" id="form1" action="php/uploadinfo.php" method="post" enctype="multipart/form-data">
-          <button class="nextButton" id="enterEmailNextButton" onclick="">Next</button>
+        <form id="form1" action="php/uploadinfo.php" method="post" enctype="multipart/form-data">
+          <button class="nextButton" id="enterEmailNextButton">Next</button>
         </form>
         <button class="backButton" id="enterEmailBackButton" onclick="addNamePage()">Back</button>
       </div>

@@ -95,6 +95,6 @@ function enterEmailPage(){
 
 function submitGreetingInfo(){
   location.replace("https://craig026.github.io/WebARGreetings/Recipient/recipientnew.html");
-  alert("Submitting Greeting Info!");
+  //alert("Submitting Greeting Info!");
 
 }
