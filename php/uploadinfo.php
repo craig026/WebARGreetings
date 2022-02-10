@@ -13,12 +13,12 @@ if($conn->connect_error){
 }
 echo "Connected successfully";
 
-$greeting = $_POST['modelTitle'];
-$filename = $_FILES["inpFile"]["name"];
+$greeting = isset($_POST['modelTitle']);
+$filename = isset($_FILES["inpFile"]["name"]);
 $target_dir = "https://craig026.000webhostapp.com/uploads/";
 $target_file = $target_dir . basename($_FILES["inpFile"]["name"]);
-$recipientname = $_POST['inpName'];
-$senderemail = $_POST['inpEmail'];
+$recipientname = isset($_POST['inpName']);
+$senderemail = isset($_POST['inpEmail']);
 
 //Select file type
 $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
