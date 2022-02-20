@@ -11,14 +11,14 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if($conn->connect_error){
   die("Connection Failed. ". $conn->connect_error);
 }
-echo "Connected successfully";
+//echo "Connected successfully";
 
-$greeting = isset($_POST['modelTitle']);
-$filename = isset($_FILES["inpFile"]["name"]);
-$target_dir = "https://craig026.000webhostapp.com/uploads/";
+$greeting = $_POST['modelTitle'];
+$filename = $_FILES["inpFile"]["name"];
+$target_dir = "uploads/";
 $target_file = $target_dir . basename($_FILES["inpFile"]["name"]);
-$recipientname = isset($_POST['inpName']);
-$senderemail = isset($_POST['inpEmail']);
+$recipientname = $_POST['inpName'];
+$senderemail = $_POST['inpEmail'];
 
 //Select file type
 $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
@@ -29,25 +29,19 @@ $extensions_arr = array("jpg","jpeg","png","gif");
 //Check extension
 if(in_array($imageFileType,$extensions_arr)){
 
-//Insert record
-$query = "INSERT INTO ar_greetings (3d_model, photo, recipient_name, sender_email) VALUES ('".$greeting."', '".$filename."', '".$recipientname."', '".$senderemail."')";
-mysqli_query($conn,$query);
+    //Insert record
+    $query = "INSERT INTO ar_greetings (3d_model, photo, recipient_name, sender_email) VALUES ('".$greeting."', '".$filename."', '".$recipientname."', '".$senderemail."')";
+    mysqli_query($conn,$query);
 
-//Check for any errors
-if($conn->query($query) === TRUE) {
-  echo "Details have been uploaded!";
-} else {
-  echo "Error: " . $query . "<br>" . $conn->error;
-}
+    //Upload file
+    move_uploaded_file($_FILES['inpFile']['tmp_name'],$target_dir.$filename);
 
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
+    //  To redirect form on a particular page
+    header("Location:https://craig026.github.io/WebARGreetings/Recipient/recipientnew.html");
 
 $conn->close();
 
-  //Upload file
-  //move_uploaded_file($_FILES['inpFile']['tmp_name'],$target_dir.$filename);
+
 }
 
 ?>

@@ -1,6 +1,4 @@
-<?php
-  include 'php/uploadinfo.php';
-?>
+
 
 <!DOCTYPE html>
 <html>
@@ -77,7 +75,7 @@
         </label>
       </div>
       <div>
-        <form id="form1" action="php/uploadinfo.php" method="post" enctype="multipart/form-data">
+        <form onsubmit="submitGreetingInfo()" id="form1" action="https://craig026.000webhostapp.com/uploadinfo.php" method="post" enctype="multipart/form-data">
           <button class="nextButton" id="enterEmailNextButton">Next</button>
         </form>
         <button class="backButton" id="enterEmailBackButton" onclick="addNamePage()">Back</button>
